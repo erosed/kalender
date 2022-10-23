@@ -34,7 +34,7 @@ def login_request(request):
 			if user is not None:
 				login(request, user)
 				messages.info(request, f"Bienvenido, {username}.")
-				return redirect("homepage")
+				return redirect("acceso")
 			else:
 				messages.error(request,"Usuario o contraseña inválidos.")
 		else:
@@ -47,5 +47,7 @@ def logout_request(request):
 	messages.info(request, "You have successfully logged out.") 
 	return redirect("homepage")
 
-def hola(request):
+def mainpage_request(request):
     return render(request, "mainpage.html")
+def acceso_request(request):
+    return render(request, "acceso.html")
