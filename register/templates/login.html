@@ -1,3 +1,4 @@
+{% extends "header.html" %}
 
 {% block content %}      
 
@@ -10,7 +11,7 @@
     {{ login_form|crispy }}
     <button class="btn btn-primary" type="submit">Login</button>
   </form>
-  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+  <p class="text-center">¿No tienes cuenta en Kalender? <a href="/register">Crea una aquí</a>.</p>
 </div>
 
 {% endblock %}
